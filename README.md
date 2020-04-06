@@ -1,4 +1,5 @@
 # Test Project
 
-### Purpose
+## Purpose
+
 To play with GitHub actions
