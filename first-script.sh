@@ -1,1 +1,0 @@
-echo "now is the time for all bad code to be checked into gh"
