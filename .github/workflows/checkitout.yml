@@ -7,7 +7,7 @@ concurrency:
 
 jobs:
   look-at-stuff:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - run: echo "This is a CI build of branch ${{ github.ref }} in repository ${{ github.repository }}"
       - run: echo "This job was triggered by a ${{ github.event_name }} event and is running on a ${{ runner.os }} server"
