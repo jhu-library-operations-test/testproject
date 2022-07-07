@@ -1,0 +1,17 @@
+name: check-it-out
+on: [workflow_dispatch]
+
+concurrency:
+  group: ci-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  look-at-stuff:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This is a CI build of branch ${{ github.ref }} in repository ${{ github.repository }}"
+      - run: echo "This job was triggered by a ${{ github.event_name }} event and is running on a ${{ runner.os }} server"
+      - run: cat /proc/cpuinfo
+      - run: free -g
+      - run: cat /proc/meminfo
+      - run: df -h
